@@ -1,0 +1,49 @@
+Primero codigo para crear model y tabla:
+rails g model Dueno nombre:string  apellido_paterno:string apellido_materno:string sexo:string tipo_documento:string numero_documento:string correo:string pass:string fe_Nacimiento:date celular:string
+*************************************************************************************************************
+procedemos a migrar db
+rake db:migrate
+**************************************************************************************************************
+en la vista agregamos el form con codigo ruby:
+<%= form_for @dueno, url: dueno_registrar_path do |f| %>
+dueno_registrar hace referencia a el controller dueno y metodo registrar.
+**************************************************************************************************************
+
+
+	<div class="form-group">
+	<label class="control-label col-sm-2" for="name">Nombres: </label>
+	<div class="col-sm-4">
+	<%= f.text_field :nombre ,:class => "form-control" %>
+	</div>
+	</div>
+
+agregamos helpers en este caso f.text_field con id :nombre, este id debe coincidir con el campo de nuestra tabla.
+***************************************************************************************************************
+En el controller agregamos:
+def perfil_dueno
+    @dueno=Dueno.new
+  end
+
+def registrar
+    @dueno=Dueno.new(params.require(:dueno).permit(:nombre, :apellido_paterno, :apellido_materno,:sexo,:tipo_documento,:numero_documento,:correo,:pass,:fe_Nacimiento,:celular))
+    @dueno.save
+    redirect_to inicio_dueno_path
+  end
+***************************************************************************************************************
+procedemos a rutear el metodo registrar del controller
+
+post  "dueno/registrar"
+***************************************************************************************************************
+Adicional: Si quieren ver los datos de la db escriben_:
+rails dbconsole
+
+----para ver las tablas .tables
+---- consultar datos select * from tabla ;
+
+
+
+***************************************************************************************************************
+
+rails g model Estacionamiento nombre:string direccion:string distrito:string direccion_google:string telefono:string precio:string foto:string dimensiones:string tipo:string ubicacion:string
+
+

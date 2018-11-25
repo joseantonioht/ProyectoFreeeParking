@@ -1,0 +1,83 @@
+
+<%= content_for :intro do %>
+<h3>REGISTRAR NUEVO ESTACIONAMIENTO</h3>
+<% end %>
+
+
+<div class="col-md-9">
+	<div class='form-horizontal'>
+
+  	<%= form_for @estac, url: dueno_registrarEstacionamiento_path do |f| %>
+
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="name">Nombre Descriptivo: </label></P>
+	<div class="col-sm-4">
+	<%= f.text_field :nombre ,:class => "form-control input-sm" %> 
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="direccionru">Direccion: </label></P>
+	<div class="col-sm-4">
+	<%= f.text_field :direccion ,:class => "form-control input-sm" %> 
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="dist">Distrito: </label></P>
+	<div class="col-sm-4">
+	<%= f.text_field :distrito ,:class => "form-control input-sm" %> 
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="map">Diraccion en Google Maps: </label></P>
+	<div class="col-sm-4">
+	<%= f.text_field :direccion_google ,:class => "form-control input-sm" %>  
+	</div>
+	</div>
+	
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="telefono">Telefono: </label></P>
+	<div class="col-sm-4">
+	<%= f.telephone_field :telefono, :class => "form-control input-sm" %>
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="preciohora">Precio por Hora: </label></P>
+	<div class="col-sm-4">
+	<%= f.text_field :precio ,:class => "form-control input-sm" %>  
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="foto">Foto: </label></P>
+	<div class="col-sm-4">
+	<%= f.file_field :foto ,:class => "form-control" %>   
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="dimension">Dimenciones: </label></P>
+	<div class="col-sm-4">
+	<%= f.text_field :dimensiones ,:class => "form-control input-sm" %>  
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2 " for="tipo">Tipo: </label></P>
+	<div class="col-sm-4">
+	<%= f.select :tipo, options_for_select([['Interior',1],['Exterior',2],['Aire Libre',3]]),{},{class:"form-control" } %>
+	</select>
+	</div>
+	</div>
+	<div class="form-group">
+	<P><label class="control-label col-sm-2" for="ubicacion">Ubicacion: </label></P>
+	<div class="col-sm-4">
+	<%= f.text_field :ubicacion ,:class => "form-control input-sm" %> 
+	</div>
+	</div>
+	<div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success" onclick='alert("Cambios Guardados")'>REGISTRAR</button>
+      </div>
+    </div>
+    <% end %>
+</div>
+</div>
+
+

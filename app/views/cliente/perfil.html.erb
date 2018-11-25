@@ -1,0 +1,107 @@
+
+<%= content_for :intro do %>
+<h3>EDITAR PERFIL CLIENTE</h3>
+<% end %>
+
+<div class="col-md-9">
+<form class="form-horizontal">
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="name">Nombres: </label>	</p>
+	<div class="col-sm-4">
+	<input type="text" class="form-control input-sm"  id="name", placeholder="Nombres"> 
+	</div>
+	</div>
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="apellidoP">Apellido Paterno: </label></p>
+	<div class="col-sm-4">
+	<input type="text" class="form-control input-sm" id="apellidoP" placeholder="Apellido Paterno"> 
+	</div>
+	</div>
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="apellidoM">Apellido Materno: </label></p>
+	<div class="col-sm-4">
+	<input type="text" class="form-control input-sm" id="apellidoM" placeholder="Apellido Materno"> 
+	</div>
+	</div>
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="sexo">Sexo: </label></p>
+	<div class="col-sm-4">
+	<select class="form-control input-sm" id="seleccione">
+		<option>Masculino</option>	
+		<option>Femenino</option>
+	</select>
+	</div>
+	</div>
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="tipod">Tipo de documento: </label></p>
+	<div class="col-sm-4">
+	<select class="form-control input-sm" id="seleccione">
+		<option>DNI</option>	
+		<option>Pasaporte</option>
+	</select>
+
+	</div>
+	<div class="col-sm-4">
+	<input type="text" class="form-control input-sm" id="Tdocumento" placeholder="Ingrese Documento">
+	</div>
+	</div>
+
+	
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="correo">Correo: </label></p>
+	<div class="col-sm-4">
+	<input type="text" class="form-control input-sm" id="correo"  placeholder="email"> 
+	</div>
+	</div>
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="pass">Contraseña: </label></p>
+	<div class="col-sm-4">
+	<input type="password" class="form-control input-sm" id="pass" placeholder="contraseña"> 
+	</div>
+	</div>
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="pass2">Vuelva ingresar contraseña: </label></p>
+	<div class="col-sm-4">
+	<input type="password" class="form-control input-sm" id="pass2" placeholder="contraseña"> 
+	</div>
+	</div>
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="fechan">Fecha de Nacimiento: </label></p>
+	<div class="col-sm-4">
+	
+		<input type="text" class="form-control input-sm" id="datt">
+		
+	</div>
+		<script type="text/javascript">
+    	$(function(){
+    		$("#datt").datepicker();
+    	
+    	});
+    </script>
+	</div>
+
+
+
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="cell">Celular: </label>
+	<div class="col-sm-4">
+	<input type="text" class="form-control input-sm" id="cell"> 
+	</div>
+	</div>
+	
+	<div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success" onclick='alert("Se han guardado sus datos correctamente, Ahora puede disfrutar de nuestros servicios")' >Guardar cambios</button>
+      </div>
+    </div>
+    
+</form>
+</div>

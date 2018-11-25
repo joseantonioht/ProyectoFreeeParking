@@ -1,0 +1,56 @@
+// Place all the styles related to the dueno controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.menu_dueno {
+	height: 100%;
+	background-color: white;
+	border: 3px black solid;
+}
+
+.menu_dueno ul {
+	margin-top: 150px;
+	margin-bottom: 150px;
+	list-style: none;
+	display: block,
+
+}
+
+.menu_dueno li {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid blue;
+	overflow: hidden;
+}
+
+.menu_dueno p.menu {
+	
+	padding: 16px;
+	padding-right: 25px;
+	float: Left;
+	color: blue;
+	opacity: .8;
+	font-size: 1.2em;
+	-webkit-transition: opacity .2s;
+}
+
+.menu_dueno div.barra{
+	position: absolute;
+	height: 50px;
+	width: 0px;
+	background-color: #aaa;
+	opacity: .1;
+	-webkit-transition: width .2s;
+}
+
+.menu_dueno li:hover div.barra{
+	width: 215px;
+}
+
+.menu_dueno li:hover p.menu {
+	opacity: .3;
+}
+
+.trans{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,55 @@
+<%= content_for :head do %>
+	<title>Contacto</title>
+<% end %>
+
+<%= content_for :header_sub_title do %><% end %>
+<%= content_for :intro do %>
+<hi class="main-title">Contácte con nosotros</hi>
+<h3>Déjanos tus datos para poder contactarnos.</h3>
+<% end %>
+
+<div class="row">
+        <div class="col-lg-4">
+        <h4><i class="far fa-user"></i>  Información de contacto</h4>
+        <h4>
+        <br>
+        <p align="justify"><i class="fas fa-home"></i>  Calle Bernini 476 - 482 San Borja </p>
+        <br>
+		<p align="justify"><i class="fas fa-phone"></i> 	+511 480 - 0282</p>
+       <br>
+		<p align="justify"><i class="fas fa-mobile"></i>  +511 983 560 555</p>
+    <br>
+		<p align="justify"><i class="far fa-envelope"></i> 	info@freeparking.com.pe</p>
+		</h4>
+        </div> 
+ 		<div class="col-lg-6">  
+
+ 		<form action="/action_page.php">
+
+          <div class="form-group">
+                <p> <label for="name">Nombre:</label></p>
+                <input type="text" class="form-control" id="name" placeholder="Nombre">
+          </div>
+
+          <div class="form-group">
+                <p> <label for="email">e-mail:</label></p>
+                <input type="email" class="form-control" id="email" placeholder="e-mail">
+          </div>
+
+          <div class="form-group">
+                <p> <label for="direccion">Dirrección:</label></p>
+                <input type="text" class="form-control" id="direccion" placeholder="dirección">
+          </div>
+
+          <div class="form-group">
+                <p> <label for="mensaje">Su mensaje:</label></p>
+                <textarea  placeholder="mensaje" class="form-control" id="mensaje" rows="6"></textarea> 
+          </div>
+
+                 <button type="button" class="btn btn-default">Enviar mensaje</button>
+    </form>
+         
+    	</div> 
+        <div class="col-lg-2"> 
+         </div>   
+    </div> 

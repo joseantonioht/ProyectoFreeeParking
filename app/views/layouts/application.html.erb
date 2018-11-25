@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Proyecto</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Asap:700i" rel="stylesheet">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  
+  <body>
+
+  <%= render partial: "layouts/menu_principal" %>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+        </div>
+      </div>
+       <%= yield :intro %>
+          <h1>
+            <%= yield :header_title %> 
+          </h1>  
+          <h2>
+            <%= yield :header_sub_title %>
+          </h2>
+         
+     <%= yield %>   
+
+   </div>
+
+
+
+  </body>
+</html>
+
+

@@ -1,0 +1,54 @@
+
+
+<%= content_for :intro do %>
+<h3>LISTAR ALQUILERES</h3>
+<% end %>
+
+<div class ="col-md-9">
+  <div class="form-group">
+    
+    <form name="formulario" method="post"><P>
+    Fecha de inicio:    
+    <input type="date" name="fecha" 
+         min="0000-01-01" max="9999-12-31">
+    Fecha de Fin:
+    <input type="date" name="fecha" 
+         min="0000-01-01" max="9999-12-31">
+
+    </form>
+
+  </div>
+<form  class="form-inline">
+<div class="form-group">
+  <p><label class="control-label" for="distrito">Distrito: </label></p>
+  <select class="form-control" id="select1">
+    <option>Surco</option>  
+    <option>Santa Anita</option>
+    <option>Cercado</option>
+    <option>MIraflores</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <p><label class="control-label" for="tipo">Tipo: </label></p>
+  <select class="form-control" id="select2">
+    <option>Interior</option> 
+    <option>Exterior</option>
+    <option>Aire Libre</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <p><label class="control-label" for="ubicacion">Ubicacion: </label></p>
+  <input type="text" class="form-control" id="ubicacion"> 
+</div>
+<div class="form-group">
+  <p><label class="control-label" for=""> </label></p>
+<a class="btn btn-success" href="" role="button"><i class="fa fa-search"></i>    BUSCAR</a>
+  </div>
+
+</form>
+
+
+
+</div>

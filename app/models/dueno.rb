@@ -1,0 +1,2 @@
+class Dueno < ApplicationRecord
+end

@@ -1,0 +1,91 @@
+
+<%= content_for :intro do %>
+<h3>EDITAR PERFIL</h3>
+<% end %>
+
+<div class="col-md-9" >
+
+	<div class='form-horizontal'>
+
+	<%= form_for @dueno, url: dueno_registrar_path do |f| %>
+	
+	<div class="form-group">
+	<p> <label class="control-label  col-sm-2" for="name">Nombres: </label></p>
+	<div class="col-sm-4">
+	<%= f.text_field :nombre ,:class => "form-control input-sm" %>
+	</div>
+	</div>
+	<div class="form-group">
+	<p> <label class="control-label col-sm-2" for="apellidop">Apellido Paterno: </label></p>
+	<div class="col-sm-4">
+	<%= f.text_field :apellido_paterno ,:class => "form-control input-sm" %>
+	
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="apellidom">Apellido Materno: </label></p>
+	<div class="col-sm-4">
+	<%= f.text_field :apellido_materno ,:class => "form-control input-sm" %>
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="sexo">Sexo: </label></p>
+	<div class="col-sm-4">
+	<%= f.select :sexo, options_for_select([['Masculino',1],['Femenino',2]]),{},{class:"form-control" } %>
+	
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="tipod">Tipo de documento: </label></p>
+	<div class="col-sm-4">
+	<%= f.select :tipo_documento, options_for_select([['DNI',1],['Pasaporte',2]]),{},{class:"form-control" } %>
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="ndoc">Numero de Documento: </label></p>
+	<div class="col-sm-4">
+	<%= f.text_field :numero_documento ,:class => "form-control input-sm" %>
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="correo">Correo: </label></p>
+	<div class="col-sm-4">
+	<%= f.email_field :correo, :class => "form-control input-sm" %>
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="pass">Contraseña: </label></p>
+	<div class="col-sm-4">
+	<%= f.password_field :pass ,:class => "form-control input-sm"  %>
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="pass2">Repita la contraseña: </label></p>
+	<div class="col-sm-4">
+	<%= f.password_field :pass1 ,:class => "form-control input-sm"  %>
+	</div>
+	</div>
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="fechan">Fecha de Nacimiento: </label></p>
+	<div class="col-sm-4">
+	<%= f.date_field :fe_Nacimiento, :class => "form-control input-sm" %>
+	</div>
+	</div>
+
+	
+	<div class="form-group">
+	<p><label class="control-label col-sm-2" for="cell">Celular: </label></p>
+	<div class="col-sm-4">
+	<%= f.telephone_field :celular, :class => "form-control input-sm" %>
+	</div>
+	</div>
+	
+	<div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success" onclick='alert("Perfil Actualizado")'>Guardar cambios</button>
+      </div>
+    </div>
+   
+	<% end %>
+</div>
+</div>
